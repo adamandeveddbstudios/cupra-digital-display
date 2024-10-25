@@ -44,13 +44,27 @@
             justify-content: center;
             height: 35px;
             border-radius: 4px;
-            margin-bottom: 6px;
             transition: all .5s ease;
-            font-weight: 300;
+            font-weight: 400;
         }
         .frame a:hover{
             background-color: #000;
             color: #fff;
+        }
+        .btns{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        button{
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button img{
+            width: 15px;
         }
     </style>
 </head>
@@ -62,29 +76,55 @@
 
     <div class="frames">
         <div class="frame">
-            <a href="./300x250/index.html" target="_blank">300x250</a>
-            <iframe src="./300x250/index.html" width="300px" height="250px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./300x250/index.html" target="_blank">300x250</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./300x250/index.html" width="300px" height="250px" frameborder="0" id="iframe"></iframe>
         </div>
         <div class="frame">
-            <a href="./300x600/index.html" target="_blank">300x600</a>
-            <iframe src="./300x600/index.html" width="300px" height="600px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./300x600/index.html" target="_blank">300x600</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./300x600/index.html" width="300px" height="600px" frameborder="0" id="iframe"></iframe>
         </div>
         <div class="frame">
-            <a href="./320x480/index.html" target="_blank">320x480</a>
-            <iframe src="./320x480/index.html" width="320px" height="480px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./320x480/index.html" target="_blank">320x480</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./320x480/index.html" width="320px" height="480px" frameborder="0" id="iframe"></iframe>
         </div>
         <div class="frame">
-            <a href="./320x50/index.html" target="_blank">320x50</a>
-            <iframe src="./320x50/index.html" width="320px" height="50px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./320x50/index.html" target="_blank">320x50</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./320x50/index.html" width="320px" height="50px" frameborder="0" id="iframe"></iframe>
         </div>
         <div class="frame">
-            <a href="./728x90/index.html" target="_blank">728x90</a>
-            <iframe src="./728x90/index.html" width="728px" height="90px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./728x90/index.html" target="_blank">728x90</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./728x90/index.html" width="728px" height="90px" frameborder="0" id="iframe"></iframe>
         </div>
         <div class="frame">
-            <a href="./970x250/index.html" target="_blank">970x250</a>
-            <iframe src="./970x250/index.html" width="970px" height="250px" frameborder="0"></iframe>
+            <div class="btns">
+                <a href="./970x250/index.html" target="_blank">970x250</a>
+                <button class="reload-btn"><img src="./refresh.svg" alt=""></button>
+            </div>
+            <iframe src="./970x250/index.html" width="970px" height="250px" frameborder="0" id="iframe"></iframe>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.reload-btn').forEach((button, index) => {
+        button.addEventListener('click', function() {
+                const iframe = button.closest('.frame').querySelector('iframe'); // Selects the iframe in the same frame
+                iframe.contentWindow.location.reload(true);
+            });
+        });
+    </script>
 </body>
 </html>
