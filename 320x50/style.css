@@ -135,7 +135,7 @@ video {
   left: 277px;
 }
 #text_logo{
-  top: 9px;
+  top: 8px;
   width: 49px;
   left: 11px;
 }
@@ -148,9 +148,13 @@ video {
   top: 22px;
   font-family: "Cupra_Regular";
   font-size: 8px;
-  line-height: 19px;
+  /* line-height: 19px; */
   letter-spacing: 0.127em;
   color: #ffffff;
   text-align: center;
   border: #fff solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1px;
 }

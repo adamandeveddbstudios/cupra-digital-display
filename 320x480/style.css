@@ -146,12 +146,16 @@ video {
     width: 144px;
     height: 32px;
     left: 31px;
-    top: 419px;
+    top: 418.5px;
     font-family: "Cupra_Regular";
     font-size: 11.5px;
-    line-height: 30px;
+    /* line-height: 30px; */
     letter-spacing: 0.127em;
     color: #ffffff;
     text-align: center;
     border: #fff solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.15px;
 }
