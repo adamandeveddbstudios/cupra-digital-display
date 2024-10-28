@@ -17,16 +17,14 @@ function init() {
 }
 
 function animate() {
-  tl.set(['#main_content'], { autoAlpha:1, rotation: 0.1, force3D:true });
+  tl.set(['#main_content'], { autoAlpha:1, force3D:true });
 
   tl.addLabel('frame1', 0)
     tl.to('#text1', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, 'frame1')
-    tl.to('#text1', 0.5, { autoAlpha: 0, ease: Power1.easeOut }, 'frame1+=2')
     tl.to('#bg1', 0.5, { autoAlpha: 0, ease: Power1.easeOut }, 'frame1+=2.5')
     tl.to('#bg2', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, '<')
     tl.to('#text2', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, 'frame1+=3.5')
     tl.to('#cta', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, 'frame1+=4.5')
-
 }
 
 // CTA grow on hover
