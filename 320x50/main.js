@@ -17,7 +17,7 @@ function init() {
 }
 
 function animate() {
-  tl.set(['#main_content'], { autoAlpha:1, force3D:true });
+  tl.set(['#main_content'], { autoAlpha:1 });
   tl.set(['#cta'], { autoAlpha:0 });
   tl.addLabel('frame1', 0)
     tl.to('#text1', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, 'frame1')
