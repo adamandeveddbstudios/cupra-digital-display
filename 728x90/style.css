@@ -112,25 +112,27 @@ video {
 /* Text Styles */
 
 #text1 {
-  left: 20px;
-  top: 32px;
+  /* left: 20px;
+  top: 32px; */
   font-family: "Cupra_Book";
   font-size: 19.6px;
   line-height: 22.1px;
   letter-spacing: 1px;
   width: 100%;
   height: 100%;
+  padding: 32px 0 0 20px;
 }
 
 #text2 {
-  left: 20px;
-  top: 32px;
+  /* left: 20px;
+  top: 32px; */
   font-family: "Cupra_Book";
   font-size: 21.2px;
   line-height: 22px;
   letter-spacing: -0.1px;
   width: 100%;
   height: 100%;
+  padding: 32px 0 0 20px;
 }
 
 #logo{
